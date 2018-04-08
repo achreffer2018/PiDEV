@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="1008.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controller.HomeController">
+   <left>
+      <AnchorPane prefHeight="511.0" prefWidth="239.0" style="-fx-background-color: #ffb8b8;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To CupCake">
+               <font>
+                  <Font name="Andalus" size="21.0" />
+               </font>
+            </Text>
+            <Button layoutX="18.0" layoutY="92.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: transparent;" text=" Appels d'offre" textFill="#7c5252">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="12.0" fitWidth="13.0" layoutX="32.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../italy.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="25.0" layoutY="148.0" mnemonicParsing="false" onAction="#Ajout" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: #ae4343;" text="Ajouter " textFill="WHITE" />
+            <Button layoutX="24.0" layoutY="192.0" mnemonicParsing="false" onAction="#Affiche" prefHeight="25.0" prefWidth="158.0" style="-fx-background-color: #ae4343;" text="Mes Appels d'offre" textFill="WHITE" />
+            <Button layoutX="24.0" layoutY="256.0" mnemonicParsing="false" onAction="#affichetouts" prefHeight="25.0" prefWidth="158.0" style="-fx-background-color: #ae4343;" text="Tous les Appels d'offre" textFill="WHITE" />
+            <Button layoutX="23.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="161.0" style="-fx-background-color: #ae4343;" text="Les demandes" />
+            <Button layoutX="22.0" layoutY="356.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #ae4343;" text="Mes participations" />
+            <Button layoutX="158.0" layoutY="410.0" mnemonicParsing="false" text="Logout" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
