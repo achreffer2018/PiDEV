@@ -43,5 +43,15 @@ public class HomeController implements Initializable {
         borderpane.setCenter(root);
     }
 
+    @FXML
+    private void lesdemandes(ActionEvent event) {
+        load("Lesdemandes");
+    }
+
+    @FXML
+    private void mesparticipations(ActionEvent event) {
+        load("MesParticipation");
+    }
+
 
 }

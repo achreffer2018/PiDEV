@@ -34,9 +34,7 @@ public class AppelOffreController implements Initializable {
     private void ajoutAppeloffre(ActionEvent event) {
         AppelOffreService es = new AppelOffreService();
         AppelOffre e = new AppelOffre(sujet.getText(),date.getValue().toString(),description.getText());
-        es.createAo(e);
-        
-        
+        es.createAo(e); 
         sujet.clear();
         description.clear();
         System.out.println("Ajout effectué");

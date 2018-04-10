@@ -1,8 +1,10 @@
 package com.esprit.controller;
 
 import com.esprit.entities.AppelOffre;
+import com.esprit.entities.User;
+import com.esprit.entities.demandeoffre;
 import com.esprit.services.AppelOffreService;
-import static java.lang.System.load;
+import com.esprit.services.demandeService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
@@ -12,9 +14,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 
 public class ToutlesAppelController implements Initializable {
@@ -37,32 +37,46 @@ public class ToutlesAppelController implements Initializable {
     @FXML
     private Button participer;
     @FXML
-    private void participer(ActionEvent event) {
-        load("MesParticipation");
-           
-    }
+   
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        AppelOffre a= new AppelOffre();
         AppelOffreService es = new AppelOffreService();
         //tableview
                
         su.setCellValueFactory(new PropertyValueFactory("sujet"));      
         des.setCellValueFactory(new PropertyValueFactory("description"));
         da.setCellValueFactory(new PropertyValueFactory("datemax"));
-        eta.setCellValueFactory(new PropertyValueFactory("statut"));
+        if (a.statut==0){ 
+        eta.setCellValueFactory(new PropertyValueFactory("En attente"));
+        }else 
+            eta.setCellValueFactory(new PropertyValueFactory("Confirmé"));
        
         table.setItems(list);
     }    
 
-    private void load(String ui)
-    {
-        Parent root =null ;
-        try {
-            root = FXMLLoader.load(getClass().getResource(ui+".fxml"));
-        } catch (Exception e) {
-        }
-    
+   AppelOffre a;
+   User u;
+   
+   @FXML
+   private void participer(ActionEvent event) {
+        
+        demandeService ds = new demandeService();
+        demandeoffre e = new demandeoffre();
+        e.setStatut(0);
+        e.setAppel_id(a);
+        e.setUser_id(u);
+        ds.participerOffre(e);
+        System.out.println("Participation réussite");
+        items.clear();
+        
+        
+        
     }
-  
+    
+    
+    
+    
+    
     
 }
