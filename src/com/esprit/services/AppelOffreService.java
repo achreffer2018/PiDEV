@@ -5,20 +5,9 @@
  */
 package com.esprit.services;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import com.esprit.Iservice.IAppeloffreService;
 import com.esprit.entities.AppelOffre;
 //import javax.sql.DataSource;
-import java.sql.Statement;
-import java.sql.SQLException;
 import com.esprit.utils.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

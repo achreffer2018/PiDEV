@@ -17,6 +17,21 @@ public class AppelOffre {
     public String description;
     public  int statut;
     public String patisserie;
+    public String etat;
+
+    public AppelOffre(int id, String etat) {
+        this.id = id;
+        this.etat = etat;
+    }
+
+    public String getEtat() {
+        return etat;
+    }
+
+    public void setEtat(String etat) {
+        this.etat = etat;
+    }
+    
 
     public int getStatut() {
         return statut;

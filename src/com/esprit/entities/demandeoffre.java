@@ -26,7 +26,18 @@ public class demandeoffre {
     public demandeoffre() {
 this.statut = statut;    }
 
+    public demandeoffre(int id, User user_id, AppelOffre appel_id, int statut) {
+        this.id = id;
+        this.user_id = user_id;
+        this.appel_id = appel_id;
+        this.statut = statut;
+    }
 
+    public demandeoffre(String string, int aInt, int aInt0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+  
 
     public void setId(int id) {
         this.id = id;

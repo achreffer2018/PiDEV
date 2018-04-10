@@ -5,9 +5,22 @@
  */
 package com.esprit.controller;
 
+import com.esprit.entities.AppelOffre;
+import com.esprit.entities.User;
+import com.esprit.entities.demandeoffre;
+import com.esprit.services.AppelOffreService;
+import com.esprit.services.UserService;
+import com.esprit.services.demandeService;
 import java.net.URL;
+import static java.util.Collections.list;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
  * FXML Controller class
@@ -16,12 +29,38 @@ import javafx.fxml.Initializable;
  */
 public class LesdemandesController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private TableColumn<AppelOffre, String> suu;
+    @FXML
+    private TableColumn<AppelOffre, String> etat;
+    @FXML
+    private TableColumn<User, String> pati;
+    @FXML
+    private TableView<AppelOffre> table1;
+    
+      AppelOffreService ds = new AppelOffreService(); 
+      UserService us = new UserService();
+    ObservableList<AppelOffre> list = FXCollections.observableArrayList(ds.getAll2());
+    ObservableList<User> list1 = FXCollections.observableArrayList(us.getAllName());
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+        AppelOffre de = new AppelOffre();
+        AppelOffreService ds = new AppelOffreService(); 
+        User u = new User();
+        UserService us = new UserService();
+        suu.setCellValueFactory(new PropertyValueFactory("sujet"));      
+        pati.setCellValueFactory(new PropertyValueFactory("username"));
+        etat.setCellValueFactory(new PropertyValueFactory("statut"));
+        
+       
+            
+       
+        table1.setItems(list); 
+    
+        
+        
+        
     }    
     
 }

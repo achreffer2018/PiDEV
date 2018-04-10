@@ -32,7 +32,7 @@ public class ToutlesAppelController implements Initializable {
     private TableColumn<AppelOffre,String> eta;
     @FXML
     private TableColumn<AppelOffre,String> da;
-       AppelOffreService es = new AppelOffreService();
+    AppelOffreService es = new AppelOffreService();
     ObservableList<AppelOffre> list = FXCollections.observableArrayList(es.getAll2());
     @FXML
     private Button participer;
@@ -62,8 +62,6 @@ public class ToutlesAppelController implements Initializable {
         demandeService ds = new demandeService();
         demandeoffre e = new demandeoffre();
         e.setStatut(0);
-        e.setAppel_id(a);
-        e.setUser_id(u);
         ds.participerOffre(e);
         System.out.println("Participation réussite");
         items.clear();

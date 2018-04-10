@@ -16,12 +16,12 @@
          </font>
       </Text>
       <Separator layoutY="52.0" prefHeight="0.0" prefWidth="600.0" />
-      <TableView layoutY="62.0" prefHeight="395.0" prefWidth="348.0">
+      <TableView fx:id="table2" layoutY="62.0" prefHeight="395.0" prefWidth="348.0">
         <columns>
-          <TableColumn prefWidth="157.0" style="-fx-background-color: pink;" text="Sujet" />
-          <TableColumn prefWidth="202.0" style="-fx-background-color: pink;" text="Etat" />
+          <TableColumn fx:id="sujet" prefWidth="157.0" style="-fx-background-color: pink;" text="Sujet" />
+          <TableColumn fx:id="etat" prefWidth="202.0" style="-fx-background-color: pink;" text="Etat" />
         </columns>
       </TableView>
-      <Button layoutX="387.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="179.0" style="-fx-background-color: #ff5656;" text="Annuler" textFill="WHITE" />
+      <Button fx:id="annuler" layoutX="387.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="179.0" style="-fx-background-color: #ff5656;" text="Annuler" textFill="WHITE" />
    </children>
 </AnchorPane>

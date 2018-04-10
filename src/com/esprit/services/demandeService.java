@@ -40,4 +40,31 @@ public class demandeService {
             Logger.getLogger(AppelOffreService.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public ArrayList<demandeoffre> getAll4() {
+        ArrayList<demandeoffre> listdemande = new ArrayList<>();
+        try {
+            stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("Select * appeldoffre");
+            while (rs.next()) {
+                //System.out.println(rs.getString(2) + " (" + rs.getString(3) + ")");
+                listdemande.add(new demandeoffre(
+                        rs.getString("user_id.username"),
+                        rs.getInt("appel_id.sujet"),
+                        rs.getInt("statut")
+                       
+                ));
+            }
+            stmt.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(AppelOffreService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return listdemande ;
+    }
+    
+    
+    
+    
+    
+    
 }
