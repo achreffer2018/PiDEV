@@ -32,7 +32,7 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Button layoutX="53.0" layoutY="430.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="198.0" style="-fx-background-color: transparent;" text="Statistiques Sur Les Appel">
+            <Button layoutX="53.0" layoutY="430.0" mnemonicParsing="false" onAction="#stat" prefHeight="34.0" prefWidth="198.0" style="-fx-background-color: transparent;" text="Statistiques Sur Les Appel">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>

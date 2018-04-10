@@ -41,9 +41,7 @@ public class ToutlesAppelController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         AppelOffre a= new AppelOffre();
-        AppelOffreService es = new AppelOffreService();
-        //tableview
-               
+        AppelOffreService es = new AppelOffreService();        
         su.setCellValueFactory(new PropertyValueFactory("sujet"));      
         des.setCellValueFactory(new PropertyValueFactory("description"));
         da.setCellValueFactory(new PropertyValueFactory("datemax"));

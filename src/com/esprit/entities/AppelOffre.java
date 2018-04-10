@@ -16,6 +16,25 @@ public class AppelOffre {
     public String sujet;
     public String description;
     public  int statut;
+    public String patisserie;
+
+    public int getStatut() {
+        return statut;
+    }
+
+    public void setStatut(int statut) {
+        this.statut = statut;
+    }
+    
+
+    public String getPatisserie() {
+        return patisserie;
+    }
+
+    public void setPatisserie(String patisserie) {
+        this.patisserie = patisserie;
+    }
+    
 
     public AppelOffre(int id, String datemax, String sujet, String description, int statut) {
         this.id = id;

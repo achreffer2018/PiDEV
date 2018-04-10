@@ -21,7 +21,7 @@ public class MainAppelOffre extends Application {
 
     @Override
     public void start(Stage Stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("sms.fxml"));
         Scene scene = new Scene(root);
         Stage.setScene(scene);
         Stage.show();

@@ -53,5 +53,10 @@ public class HomeController implements Initializable {
         load("MesParticipation");
     }
 
+    @FXML
+    private void stat(ActionEvent event) {
+        load("stat");
+    }
+
 
 }
