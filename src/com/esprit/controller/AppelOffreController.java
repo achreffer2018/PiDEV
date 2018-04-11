@@ -2,6 +2,7 @@ package com.esprit.controller;
 
 import com.esprit.entities.AppelOffre;
 import com.esprit.services.AppelOffreService;
+import com.esprit.services.UserService;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -30,11 +31,17 @@ public class AppelOffreController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }
+    UserService us= new UserService();
+    
 
     @FXML
     private void ajoutAppeloffre(ActionEvent event) throws IOException {
+        
+  
+        //UserService.userconnected=;
 
         if (valider()) {
+            
             AppelOffreService es = new AppelOffreService();
             AppelOffre e = new AppelOffre(sujet.getText(), date.getValue().toString(), description.getText());
             es.createAo(e);

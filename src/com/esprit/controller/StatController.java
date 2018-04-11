@@ -36,10 +36,10 @@ public class StatController implements Initializable {
        
         XYChart.Series set1 = new XYChart.Series<>();
         set1.getData().add(new XYChart.Data("Patisserie 1",2));
-        set1.getData().add(new XYChart.Data("Patisserie 2",6));
-        set1.getData().add(new XYChart.Data("Patisserie 3",1));
-        set1.getData().add(new XYChart.Data("Patisserie 4",8));
-        set1.getData().add(new XYChart.Data("Patisserie 5",3));
+        set1.getData().add(new XYChart.Data("Patisserie 2",1));
+        set1.getData().add(new XYChart.Data("Patisserie 3",3));
+        set1.getData().add(new XYChart.Data("Patisserie 4",1));
+        set1.getData().add(new XYChart.Data("Patisserie 5",1));
         set1.getData().add(new XYChart.Data("Patisserie 6",0));
         NombreA.getData().addAll(set1);
         

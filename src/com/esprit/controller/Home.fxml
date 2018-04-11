@@ -32,7 +32,7 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Button layoutX="53.0" layoutY="430.0" mnemonicParsing="false" onAction="#stat" prefHeight="34.0" prefWidth="198.0" style="-fx-background-color: transparent;" text="Statistiques Sur Les Appel">
+            <Button layoutX="54.0" layoutY="403.0" mnemonicParsing="false" onAction="#stat" prefHeight="34.0" prefWidth="198.0" style="-fx-background-color: transparent;" text="Statistiques Sur Les Appel">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
@@ -41,7 +41,7 @@
                   <Font name="Freestyle Script" size="46.0" />
                </font>
             </Text>
-            <ImageView fitHeight="41.0" fitWidth="39.0" layoutX="130.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="41.0" fitWidth="39.0" layoutX="130.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../javafxtest.images/Conversion-optimization-512.png" />
                </image>
@@ -56,6 +56,11 @@
                   <Image url="@../../../javafxtest.images/iconsolution_big_08_gestionprojet_1.png" />
                </image>
             </ImageView>
+            <Button fx:id="stat2" layoutX="56.0" layoutY="437.0" mnemonicParsing="false" onAction="#sta2" prefHeight="25.0" prefWidth="189.0" style="-fx-background-color: transparent;" text="Statistiques">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </left>

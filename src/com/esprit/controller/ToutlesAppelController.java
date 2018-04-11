@@ -52,12 +52,22 @@ public class ToutlesAppelController implements Initializable {
        
         table.setItems(list);
     }    
+     private void initialiserDetails(AppelOffre a) {
+      
+                participer.setVisible(false);
+                
+     if(User.getUserconnected()==a.getId_owner())
+     { 
+                participer.setVisible(true);}
+               
+     else if(User.getUserconnected()!=a.getId_owner())
+                { participer.setVisible(true);
+               }
 
-   AppelOffre a;
-   User u;
+     }
    
-   @FXML
-   private void participer(ActionEvent event) {
+  @FXML
+    public void participer(ActionEvent event) {
         
         demandeService ds = new demandeService();
         demandeoffre e = new demandeoffre();

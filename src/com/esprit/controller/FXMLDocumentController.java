@@ -33,9 +33,9 @@ public class FXMLDocumentController implements Initializable {
     private void LoginAction(javafx.event.ActionEvent event) throws IOException {
             UserService service =new UserService();
 
-        if (pass.getText().equals("client") && (login.getText().equals("client"))) 
+        if (pass.getText().equals("pat") && (login.getText().equals("pat"))) 
         {
-            JOptionPane.showMessageDialog(null, " Bienvenu cher Client ");
+            JOptionPane.showMessageDialog(null, " Bienvenu cher Visiteur ");
         
             
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("AfterLogin.fxml"));

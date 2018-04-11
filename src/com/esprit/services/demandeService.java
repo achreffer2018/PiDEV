@@ -32,8 +32,8 @@ public class demandeService {
 
             String req = "INSERT INTO demandeoffre (username,appel_id,statut) VALUES (?,?,?)";
             PreparedStatement st = conn.prepareStatement(req);
-            st.setInt(1, e.getUser().getId());
-            st.setInt(2, e.getAppel().getId());
+            st.setString(1,e.getUser().getUsername());
+            st.setInt(2, e.getAppel().getId_owner());
             st.setInt(3, e.getStatut());
             st.executeUpdate();
         } catch (SQLException ex) {

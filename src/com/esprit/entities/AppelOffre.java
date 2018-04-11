@@ -16,6 +16,22 @@ public class AppelOffre {
     public String sujet;
     public String description;
     public int statut;
+    public int id_owner;
+
+    public int getId_owner() {
+        return id_owner;
+    }
+
+    public void setId_owner(int id_owner) {
+        this.id_owner = id_owner;
+    }
+
+   
+
+    public AppelOffre(int id, User patisserie) {
+        this.id = id;
+        this.patisserie = patisserie;
+    }
     public User patisserie;
 
     public int getStatut() {

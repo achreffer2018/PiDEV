@@ -7,6 +7,8 @@ package com.esprit.services;
 
 import com.esprit.Iservice.IAppeloffreService;
 import com.esprit.entities.AppelOffre;
+import com.esprit.entities.User;
+import static com.esprit.services.UserService.userconnected;
 //import javax.sql.DataSource;
 import com.esprit.utils.DataSource;
 import java.sql.Connection;
@@ -36,9 +38,7 @@ public class AppelOffreService implements IAppeloffreService {
             st.setString(1, e.getDate());
             st.setString(2, e.getSujet());
             st.setString(3, e.getDescription());
-
             st.executeUpdate();
-
         } catch (SQLException ex) {
             Logger.getLogger(AppelOffreService.class.getName()).log(Level.SEVERE, null, ex);
         }

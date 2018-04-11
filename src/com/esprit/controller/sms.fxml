@@ -9,20 +9,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controller.SmsController">
+<AnchorPane id="AnchorPane" prefHeight="507.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controller.SmsController">
    <children>
-      <ImageView fitHeight="412.0" fitWidth="620.0" layoutX="-19.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="593.0" fitWidth="770.0" layoutX="-19.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../javafxtest.images/contact_us_page_phone_email_written_licks_cake_design.jpg" />
          </image></ImageView>
-      <TextField fx:id="cle" layoutX="195.0" layoutY="53.0" prefHeight="25.0" prefWidth="193.0" promptText="                     Clé" />
-      <TextField fx:id="env" layoutX="195.0" layoutY="97.0" prefHeight="25.0" prefWidth="193.0" promptText="             Envoyé par" />
-      <TextArea fx:id="msg" layoutX="192.0" layoutY="206.0" prefHeight="127.0" prefWidth="200.0" promptText="                    Message" />
-      <Button layoutX="234.0" layoutY="342.0" mnemonicParsing="false" onAction="#envoyer" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: pink;" text="Envoyer" textFill="WHITE">
+      <TextField fx:id="cle" layoutX="263.0" layoutY="87.0" prefHeight="25.0" prefWidth="193.0" promptText="                     Clé" />
+      <TextField fx:id="env" layoutX="270.0" layoutY="137.0" prefHeight="25.0" prefWidth="193.0" promptText="             Envoyé par" />
+      <TextArea fx:id="msg" layoutX="266.0" layoutY="244.0" prefHeight="127.0" prefWidth="200.0" promptText="                    Message" />
+      <Button layoutX="302.0" layoutY="415.0" mnemonicParsing="false" onAction="#envoyer" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: pink;" text="Envoyer" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <ComboBox fx:id="num" layoutX="195.0" layoutY="153.0" onMouseClicked="#afficherComboBox" prefHeight="28.0" prefWidth="200.0" promptText="                   Numéro" />
+      <ComboBox fx:id="num" layoutX="266.0" layoutY="192.0" onMouseClicked="#afficherComboBox" prefHeight="28.0" prefWidth="200.0" promptText="                   Numéro" />
    </children>
 </AnchorPane>

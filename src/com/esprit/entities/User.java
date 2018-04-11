@@ -13,6 +13,15 @@ public class User {
     String password;
     String roles ;
     String numero ;
+   private static int userconnected;
+
+    public static int getUserconnected() {
+        return userconnected;
+    }
+
+    public static void setUserconnected(int userconnected) {
+        User.userconnected = userconnected;
+    }
 
     public User(int id, String numero) {
         this.id = id;
@@ -27,6 +36,11 @@ public class User {
 
     public void setNumero(String numero) {
         this.numero = numero;
+    }
+    
+
+    public void setId(int id) {
+        this.id = id;
     }
     
 

@@ -1,7 +1,9 @@
 package com.esprit.controller;
 
 import com.esprit.entities.AppelOffre;
+import com.esprit.entities.User;
 import com.esprit.services.AppelOffreService;
+import com.esprit.services.UserService;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,8 +22,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class AfficheappelController implements Initializable {
 
-    @FXML
-    private ListView<String> l;
+  
     ObservableList<String> items = FXCollections.observableArrayList();
     @FXML
     private TableView<AppelOffre> table;
@@ -36,13 +37,15 @@ public class AfficheappelController implements Initializable {
     ObservableList<AppelOffre> list = FXCollections.observableArrayList(es.getAll());
     @FXML
     private AnchorPane pane;
-    /**
-     * Initializes the controller class.
-     */
+   
+    User u = new User();
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         AppelOffreService es = new AppelOffreService();
         //tableview
+     
         
         ObservableList<AppelOffre> list = FXCollections.observableArrayList(es.getAll());
                 table.setItems(list);
