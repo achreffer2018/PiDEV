@@ -15,23 +15,8 @@ public class AppelOffre {
     public String datemax;
     public String sujet;
     public String description;
-    public  int statut;
-    public String patisserie;
-    public String etat;
-
-    public AppelOffre(int id, String etat) {
-        this.id = id;
-        this.etat = etat;
-    }
-
-    public String getEtat() {
-        return etat;
-    }
-
-    public void setEtat(String etat) {
-        this.etat = etat;
-    }
-    
+    public int statut;
+    public User patisserie;
 
     public int getStatut() {
         return statut;
@@ -40,16 +25,14 @@ public class AppelOffre {
     public void setStatut(int statut) {
         this.statut = statut;
     }
-    
 
-    public String getPatisserie() {
+    public User getPatisserie() {
         return patisserie;
     }
 
-    public void setPatisserie(String patisserie) {
+    public void setPatisserie(User patisserie) {
         this.patisserie = patisserie;
     }
-    
 
     public AppelOffre(int id, String datemax, String sujet, String description, int statut) {
         this.id = id;
@@ -65,7 +48,7 @@ public class AppelOffre {
         this.description = description;
         this.statut = statut;
     }
-  
+
     public String getDatemax() {
         return datemax;
     }
@@ -74,27 +57,20 @@ public class AppelOffre {
         this.datemax = datemax;
     }
 
-
     public AppelOffre(int id, String datemax, String sujet, String description) {
         this.id = id;
         this.datemax = datemax;
         this.sujet = sujet;
         this.description = description;
-       
+
     }
 
     public AppelOffre(String datemax, String sujet, String description) {
         this.datemax = datemax;
         this.sujet = sujet;
         this.description = description;
-        
+
     }
-
- 
-
- 
-
-
 
     public AppelOffre() {
     }

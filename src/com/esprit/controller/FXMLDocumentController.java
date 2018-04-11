@@ -1,4 +1,5 @@
 package com.esprit.controller;
+import com.esprit.entities.User;
 import com.esprit.services.UserService;
 import javafx.scene.control.TextField;
 import java.io.IOException;
@@ -13,16 +14,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import javax.swing.JComponent;
 import javax.swing.JOptionPane;
-import javax.swing.plaf.OptionPaneUI;
-import javax.swing.plaf.RootPaneUI;
 public class FXMLDocumentController implements Initializable {
     
     private Connection connection;
@@ -36,16 +31,14 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void LoginAction(javafx.event.ActionEvent event) throws IOException {
-    
-        
-        
-        UserService service =new UserService();
-        
-        if (pass.getText().equals("admin") && (login.getText().equals("admin"))) {
-            JOptionPane.showMessageDialog(null, " Bienvenu Admin ");
+            UserService service =new UserService();
+
+        if (pass.getText().equals("client") && (login.getText().equals("client"))) 
+        {
+            JOptionPane.showMessageDialog(null, " Bienvenu cher Client ");
         
             
-        Parent home_page_parent = FXMLLoader.load(getClass().getResource("Home.fxml"));
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("AfterLogin.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.hide(); //optional
@@ -53,8 +46,10 @@ public class FXMLDocumentController implements Initializable {
         app_stage.show();
         
         } else 
-        if (pass.getText().equals("client") && (login.getText().equals("client"))) {
-                    Parent home_page_parent = FXMLLoader.load(getClass().getResource("FXMLHome.fxml"));
+        if (service.Login(login.getText(), pass.getText()))
+      // if (pass.getText().equals("client") && (login.getText().equals("client"))) 
+        {
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("Home.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.hide(); //optional
@@ -83,7 +78,7 @@ public class FXMLDocumentController implements Initializable {
     }
     private void loadNextScren() {
         try {
-            Parent secondView = FXMLLoader.load(getClass().getResource("Home.fxml"));
+            Parent secondView = FXMLLoader.load(getClass().getResource("FXMLRegister.fxml"));
             //secondView = (StackPane) 
             Scene newScene = new Scene(secondView);
             Stage curStage = (Stage) rootanchor.getScene().getWindow();

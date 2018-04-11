@@ -17,7 +17,7 @@
    <children>
       <AnchorPane prefHeight="380.0" prefWidth="966.0">
          <children>
-            <ImageView fitHeight="595.0" fitWidth="833.0" layoutX="132.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="553.0" fitWidth="824.0" layoutX="141.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../javafxtest.images/fancy-cupcakes-2.jpg" />
                </image>

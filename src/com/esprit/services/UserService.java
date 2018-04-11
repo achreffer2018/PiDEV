@@ -25,15 +25,13 @@ public class UserService implements IUserService {
     @Override
     public void createUser(User user) {
                 try {
-            String req = "INSERT INTO User (username,email,password,roles,numero) VALUES (?,?,?,?,?)";
+            String req = "INSERT INTO User (username,email,password,roles) VALUES (?,?,?,?)";
             
             PreparedStatement st = conn.prepareStatement(req);
             st.setString(1,user.getUsername());
             st.setString(2,user.getEmail());
             st.setString(3,user.getPassword());
             st.setString(4,user.getRoles());
-            st.setString(5,user.getNumero());
-            
             st.executeUpdate();
             
         } catch (SQLException ex) {
@@ -50,17 +48,13 @@ public class UserService implements IUserService {
             while (rs.next()) {
                 
                 System.out.println(rs.getString(1) + " (" + rs.getString(2) + ")"
-                + " (" + rs.getString(3) + ")"+ " (" + rs.getString(4) + ")" + "(" + rs.getString(5) + ")");
+                + " (" + rs.getString(3) + ")"+ " (" + rs.getString(4) + ")");
                 listUser.add(
             new User
-                       (rs.getInt(1),
+                       (rs.getString(1),
                         rs.getString(2),
                         rs.getString(3),
-                        rs.getString(4),
-                        rs.getString(5)
-                               
-                        
-                               
+                        rs.getString(4)
                        ));
             }
             stmt.close();
@@ -88,4 +82,30 @@ public class UserService implements IUserService {
         }
         return listUser;  
     }
+    
+    
+    
+    
+    
+        //@Override
+    public Boolean Login(String username, String password) {
+
+        try {
+            stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("Select * from User WHERE User.`username` = '" + username + "'and  User.`password` like '"+password+"%'");
+            
+            if (rs.next()) {
+                System.out.println("login success");
+                return true;
+            }
+            
+
+            stmt.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return false;
+    }
+    
 }

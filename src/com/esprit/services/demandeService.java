@@ -30,10 +30,10 @@ public class demandeService {
     public void participerOffre(demandeoffre e) {
         try {
 
-            String req = "INSERT INTO demandeoffre (user_id,appel_id,statut) VALUES (?,?,?)";
+            String req = "INSERT INTO demandeoffre (username,appel_id,statut) VALUES (?,?,?)";
             PreparedStatement st = conn.prepareStatement(req);
-            st.setInt(1, e.getUser_id().getId());
-            st.setInt(2, e.getAppel_id().getId());
+            st.setInt(1, e.getUser().getId());
+            st.setInt(2, e.getAppel().getId());
             st.setInt(3, e.getStatut());
             st.executeUpdate();
         } catch (SQLException ex) {

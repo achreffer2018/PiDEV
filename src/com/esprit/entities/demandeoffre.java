@@ -11,27 +11,28 @@ package com.esprit.entities;
  */
 public class demandeoffre {
 
-    public int id;
-    public User user_id;
-    public AppelOffre appel_id;
+    public User id ;
+    public User user;
+    public AppelOffre appel;
     public int statut;
 
-    public demandeoffre(int id, int statut) {
+    public demandeoffre(User id, int statut) {
         this.id = id;
         this.statut = statut;
     }
 
-   
-
+  
     public demandeoffre() {
 this.statut = statut;    }
 
-    public demandeoffre(int id, User user_id, AppelOffre appel_id, int statut) {
+    public demandeoffre(User id, User user, AppelOffre appel, int statut) {
         this.id = id;
-        this.user_id = user_id;
-        this.appel_id = appel_id;
+        this.user = user;
+        this.appel = appel;
         this.statut = statut;
     }
+
+
 
     public demandeoffre(String string, int aInt, int aInt0) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -39,33 +40,43 @@ this.statut = statut;    }
 
   
 
-    public void setId(int id) {
-        this.id = id;
-    }
+   
 
-    public void setUser_id(User user_id) {
-        this.user_id = user_id;
-    }
+  
 
-    public void setAppel_id(AppelOffre appel_id) {
-        this.appel_id = appel_id;
-    }
+  
 
     public void setStatut(int statut) {
         this.statut = statut;
     }
 
-    public int getId() {
+    public User getId() {
         return id;
     }
 
-    public User getUser_id() {
-        return user_id;
+    public void setId(User id) {
+        this.id = id;
     }
 
-    public AppelOffre getAppel_id() {
-        return appel_id;
+    public User getUser() {
+        return user;
     }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public AppelOffre getAppel() {
+        return appel;
+    }
+
+    public void setAppel(AppelOffre appel) {
+        this.appel = appel;
+    }
+
+    
+
+  
 
     public int getStatut() {
         return statut;
